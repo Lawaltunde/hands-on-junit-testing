@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d04c8cb2-297e-43e5-aa11-b5d4b1600e1f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/hands-on-junit-testing.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hammedcode/Exercise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/hammedcode/exercise/ExerciseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/hammedcode/exercise/ExerciseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/hammedcode/exercise/ExerciseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +47,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.App.executor": "Run",
+    "JUnit.ExerciseTest.canCountVowels.executor": "Run",
+    "JUnit.ExerciseTest.canGetGrade (1).executor": "Run",
     "JUnit.ExerciseTest.canGetGrade.executor": "Run",
     "JUnit.ExerciseTest.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -93,7 +88,7 @@
       <recent name="com.hammedcode.exercise" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ExerciseTest.canGetGrade">
+  <component name="RunManager" selected="JUnit.ExerciseTest.isValidStudentId">
     <configuration name="ExerciseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="learning.junit" />
       <extension name="coverage">
@@ -105,6 +100,38 @@
       <option name="PACKAGE_NAME" value="com.hammedcode.exercise" />
       <option name="MAIN_CLASS_NAME" value="com.hammedcode.exercise.ExerciseTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseTest.canCountVowels" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learning.junit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hammedcode.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hammedcode.exercise" />
+      <option name="MAIN_CLASS_NAME" value="com.hammedcode.exercise.ExerciseTest" />
+      <option name="METHOD_NAME" value="canCountVowels" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExerciseTest.canGetGrade (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learning.junit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hammedcode.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hammedcode.exercise" />
+      <option name="MAIN_CLASS_NAME" value="com.hammedcode.exercise.ExerciseTest" />
+      <option name="METHOD_NAME" value="canGetGrade(java.lang.String,java.lang.String)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -125,8 +152,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExerciseTest.isValidStudentId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learning.junit" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.hammedcode.exercise.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.hammedcode.exercise" />
+      <option name="MAIN_CLASS_NAME" value="com.hammedcode.exercise.ExerciseTest" />
+      <option name="METHOD_NAME" value="isValidStudentId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ExerciseTest.isValidStudentId" />
+        <item itemvalue="JUnit.ExerciseTest.canGetGrade (1)" />
+        <item itemvalue="JUnit.ExerciseTest.canCountVowels" />
         <item itemvalue="JUnit.ExerciseTest.canGetGrade" />
         <item itemvalue="JUnit.ExerciseTest" />
       </list>
@@ -147,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1765906835142</updated>
-      <workItem from="1765906836200" duration="1730000" />
+      <workItem from="1765906836200" duration="3649000" />
     </task>
     <servers />
   </component>
