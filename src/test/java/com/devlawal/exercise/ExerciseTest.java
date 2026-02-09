@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 class ExerciseTest {
     private Exercise exercise;
@@ -32,6 +33,17 @@ class ExerciseTest {
         var score = Integer.parseInt(scoreStr);
         var grade = exercise.getGrade(score);
         assertThat(grade).isEqualTo(expectedGrade);
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "-1, IllegalArgumentException",
+            "101, IllegalArgumentException"
+    })
+    void cannotGetGradeButThrowsException(String scoreStr, String expectedException) {
+        var score = Integer.parseInt(scoreStr);
+        assertThatThrownBy(() -> exercise.getGrade(score)).isInstanceOf(IllegalArgumentException.class).
+                hasMessageContaining("Score must be between 0 and 100");
     }
 
     @Test
