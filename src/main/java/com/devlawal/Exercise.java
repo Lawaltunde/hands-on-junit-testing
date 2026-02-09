@@ -72,7 +72,7 @@ public class Exercise {
         return copy;
     }
 
-    // 9. Check if student passed
+    // 9. Check if a student passed
     public boolean hasPassed(int score) {
         return score >= 50;
     }

@@ -1,0 +1,38 @@
+package com.devlawal;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static com.devlawal.ShippingCostCalculator.Region;
+
+class ShippingCostCalculatorTest {
+    private ShippingCostCalculator underTest;
+
+    @BeforeEach
+    void setUp() {
+        underTest = new ShippingCostCalculator();
+    }
+
+    @Test
+    void shouldChargeFiveDollarsForSmallPackage() {
+        assertThat(underTest.
+                calculate(0.5, Region.Local, false)).isEqualTo(5.0);
+    }
+
+    @Test
+    void shouldChargeTenEurosForLocalStandardShipping() {
+        assertThat(underTest.calculate(2.0, Region.Local, false)).isEqualTo(10.00);
+    }
+
+    @Test
+    void shouldChargeTwentyEurosForInternationalShipping() {
+        assertThat(underTest.calculate(2.0, Region.International, false)).isEqualTo(20.00);
+    }
+
+    @Test
+    void shouldAddExpressFee() {
+        assertThat(underTest.calculate(0.5, Region.Local, true)).isEqualTo(20.00);
+    }
+}
