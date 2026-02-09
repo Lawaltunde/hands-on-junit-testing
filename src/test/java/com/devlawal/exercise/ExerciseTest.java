@@ -2,16 +2,26 @@ package com.devlawal.exercise;
 
 
 import com.devlawal.Exercise;
+import com.devlawal.Student;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+
+import java.util.List;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 class ExerciseTest {
     private Exercise exercise;
+    private final List<Student> students = List.of(
+            new Student("jenna", 90),
+            new Student("lawal", 80),
+            new Student("kim", 60),
+            new Student("josh", 53),
+            new Student("joshua", 45)
+    );
 
     @BeforeEach
     void setUp() {
@@ -55,6 +65,8 @@ class ExerciseTest {
 
     @Test
     void canCalculateAverage() {
+        double actual = exercise.calculateAverage(List.of(6, 8, 9));
+        assertThat(actual).isEqualTo(7.666666666666667);
     }
 
     @ParameterizedTest
@@ -73,18 +85,31 @@ class ExerciseTest {
 
     @Test
     void canGenerateUsername() {
+        var fullName = "Hammed Lawal";
+        var actual = exercise.generateUsername(fullName);
+        assertThat(actual).isEqualTo("hlawal");
     }
 
     @Test
     void canGetTopStudents() {
+        List<Student> topStudents = exercise.getTopStudents(students, 79);
+        List<Student> expected = List.of(
+                new Student("kim", 60),
+                new Student("josh", 53),
+                new Student("joshua", 45)
+        );
+        assertThat(expected).isEqualTo(topStudents);
     }
 
     @Test
     void hasDuplicateNames() {
+        //boolean actual = exercise.hasDuplicateNames(students);
+        assertThat(exercise.hasDuplicateNames(students)).isEqualTo(false);
     }
 
     @Test
     void canReverseCourses() {
+
     }
 
     @Test
