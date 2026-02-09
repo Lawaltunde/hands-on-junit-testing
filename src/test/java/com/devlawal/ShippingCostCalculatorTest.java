@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static com.devlawal.ShippingCostCalculator.Region;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class ShippingCostCalculatorTest {
     private ShippingCostCalculator underTest;
@@ -34,5 +35,10 @@ class ShippingCostCalculatorTest {
     @Test
     void shouldAddExpressFee() {
         assertThat(underTest.calculate(0.5, Region.Local, true)).isEqualTo(20.00);
+    }
+    @Test
+    void shouldThrowException() {
+        assertThatThrownBy(() -> underTest.calculate(-1.0, Region.Local, true)).
+                isInstanceOf(IllegalArgumentException.class).hasMessageContaining("Values below zero are not allowed");
     }
 }
