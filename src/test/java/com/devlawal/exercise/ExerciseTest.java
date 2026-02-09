@@ -109,14 +109,28 @@ class ExerciseTest {
 
     @Test
     void canReverseCourses() {
-
+        List<String> actual = exercise.reverseCourses(List.of("Biology", "Physics", "Math", "Chemistry"));
+        assertThat(actual).isEqualTo(List.of("Chemistry", "Math", "Physics", "Biology"));
     }
 
-    @Test
-    void hasPassed() {
+    @ParameterizedTest
+    @CsvSource({
+            "90, true",
+            "10, false",
+            "70, true",
+            "40, false",
+            "82, true",
+            "49, false"
+    })
+    void hasPassed(String score, String expectedBoolean) {
+        int stdScore = Integer.parseInt(score);
+        boolean actual = exercise.hasPassed(stdScore);
+        assertThat(actual).isEqualTo(Boolean.parseBoolean(expectedBoolean));
     }
 
     @Test
     void canAssignBadge() {
+        String actual = exercise.assignBadge(false);
+        assertThat(actual).isEqualTo("Needs Improvement");
     }
 }
