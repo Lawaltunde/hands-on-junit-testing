@@ -54,14 +54,21 @@ class ExerciseTest {
     }
 
     @Test
-    void isValidStudentId() {
-        String stdId = "S9875";
-        boolean isCorrectId = exercise.isValidStudentId(stdId);
-        assertThat(isCorrectId).isEqualTo(true);
+    void canCalculateAverage() {
     }
 
-    @Test
-    void canCalculateAverage() {
+    @ParameterizedTest
+    @CsvSource({
+            "S9875, true",
+            "S1768, true",
+            "S1868, true",
+            "1768, false"
+
+    })
+    void isValidStudentId(String stdId, String expectedBoolean) {
+        Boolean expected = Boolean.parseBoolean(expectedBoolean);
+        boolean isCorrectId = exercise.isValidStudentId(stdId);
+        assertThat(isCorrectId).isEqualTo(expected);
     }
 
     @Test
