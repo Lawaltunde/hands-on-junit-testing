@@ -1,4 +1,4 @@
-package com.hammedcode;
+package com.devlawal;
 
 import java.util.ArrayList;
 import java.util.Collections;

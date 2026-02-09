@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.hammedcode</groupId>
-  <artifactId>learning.junit</artifactId>
+  <groupId>com.devlawal</groupId>
+  <artifactId>hands-on-junit-testing</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>learning.junit</name>
+  <name>hands-on-testing</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -23,15 +23,14 @@
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
-      <artifactId>junit-jupiter</artifactId>
-      <version>6.0.0</version>
+      <artifactId>junit-jupiter-params</artifactId>
+      <version>6.0.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.assertj</groupId>
-      <artifactId>assertj-guava</artifactId>
-      <version>3.27.6</version>
-      <scope>test</scope>
+      <artifactId>assertj-core</artifactId>
+      <version>3.27.7</version>
     </dependency>
   </dependencies>
   <build>
@@ -40,8 +39,9 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>16</source>
-          <target>16</target>
+          <source>24</source>
+          <target>24</target>
+          <compilerArgs>--enable-preview</compilerArgs>
         </configuration>
       </plugin>
     </plugins>

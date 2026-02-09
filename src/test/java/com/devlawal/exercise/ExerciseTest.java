@@ -1,18 +1,18 @@
-package com.hammedcode.exercise;
+package com.devlawal.exercise;
 
-import com.hammedcode.Exercise;
+
+import com.devlawal.Exercise;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.junit.jupiter.api.Test.*;
 
 class ExerciseTest {
     private Exercise exercise;
 
-    @org.junit.jupiter.api.BeforeEach
+    @BeforeEach
     void setUp() {
         exercise = new Exercise();
     }
